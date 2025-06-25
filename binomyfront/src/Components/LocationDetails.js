@@ -114,7 +114,7 @@ function LocationDetails() {
               {offre.images.map((img, index) => (
                 <img
                   key={index}
-                  src={`https://pfe2025-api.vercel.app/offres/${img}`}
+                  src={`https://pfe-aya.onrender.com/offres/${img}`}
                   alt={offre?.title}
                   className="snap-center w-full md:w-1/2 rounded-lg object-cover flex-shrink-0"
                   style={{
@@ -127,7 +127,7 @@ function LocationDetails() {
             </div>
           ) : (
             <img
-              src={`https://pfe2025-api.vercel.app/offres/${offre?.images?.[0]}`}
+              src={`https://pfe-aya.onrender.com/offres/${offre?.images?.[0]}`}
               alt={offre.title}
               className="w-full rounded-lg object-cover"
               style={{
@@ -294,7 +294,7 @@ function LocationDetails() {
                   {imagesToKeep.map((img, i) => (
                     <div key={i} className="relative">
                       <img
-                        src={`https://pfe2025-api.vercel.app/offres/${img}`}
+                        src={`https://pfe-aya.onrender.com/offres/${img}`}
                         alt="ancienne"
                         className="w-20 h-20 object-cover rounded"
                       />

@@ -48,19 +48,19 @@ const Chatroom = () => {
       setMessages([]);
       try {
         const res = await axios.get(
-          `https://pfe2025-api.vercel.app/conversation/${currentUser._id}`
+          `https://pfe-aya.onrender.com/conversation/${currentUser._id}`
         );
         const conv = res.data.find((c) => c.members.includes(receiverId));
 
         if (conv) {
           setConversationId(conv._id);
           const msgRes = await axios.get(
-            `https://pfe2025-api.vercel.app/message/${conv._id}`
+            `https://pfe-aya.onrender.com/message/${conv._id}`
           );
           setMessages(msgRes.data);
 
           await axios.put(
-            `https://pfe2025-api.vercel.app/message/markAsRead/${conv._id}`,
+            `https://pfe-aya.onrender.com/message/markAsRead/${conv._id}`,
             {
               userId: currentUser._id,
             }
@@ -112,7 +112,7 @@ const Chatroom = () => {
     try {
       if (!convId) {
         const createRes = await axios.post(
-          "https://pfe2025-api.vercel.app/conversation/add",
+          "https://pfe-aya.onrender.com/conversation/add",
           {
             senderId: currentUser._id,
             receiverId,
@@ -131,7 +131,7 @@ const Chatroom = () => {
       };
 
       socket.emit("sendMessage", message);
-      await axios.post("https://pfe2025-api.vercel.app/message/add", message);
+      await axios.post("https://pfe-aya.onrender.com/message/add", message);
 
       sentAudioRef.current.currentTime = 0;
       sentAudioRef.current

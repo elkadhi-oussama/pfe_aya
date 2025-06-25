@@ -40,7 +40,7 @@ function AdminOffres() {
                 className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden transition-transform hover:scale-[1.01]"
               >
                 <img
-                  src={`https://pfe2025-api.vercel.app/offres/${offre.images?.[0]}`}
+                  src={`https://pfe-aya.onrender.com/offres/${offre.images?.[0]}`}
                   alt={offre.title}
                   className="h-48 w-full object-cover"
                 />

@@ -32,7 +32,7 @@ function UserProfile({ user }) {
           <img
             src={
               user.photo
-                ? `https://pfe2025-api.vercel.app/files/${user.photo}`
+                ? `https://pfe-aya.onrender.com/files/${user.photo}`
                 : "https://res.cloudinary.com/jerrick/image/upload/d_642250b563292b35f27461a7.png,f_jpg,q_auto,w_720/67338d48953975001dd4b439.png"
             }
             alt="Profil"

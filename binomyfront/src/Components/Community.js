@@ -116,7 +116,7 @@ function Community({ user }) {
               id={el._id}
               name={`${el.nom} ${el.prenom}`}
               title={`Étudiant(e) à ${el.institut}`}
-              image={`https://pfe2025-api.vercel.app/files/${el.photo}`}
+              image={`https://pfe-aya.onrender.com/files/${el.photo}`}
             />
           ))
         ) : (

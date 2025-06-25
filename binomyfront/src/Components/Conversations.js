@@ -22,7 +22,7 @@ const Conversations = () => {
         return;
       }
       const res = await axios.get(
-        `https://pfe2025-api.vercel.app/conversation/${currentUser._id}`
+        `https://pfe-aya.onrender.com/conversation/${currentUser._id}`
       );
 
       const uniqueConversationsMap = new Map();
@@ -64,7 +64,7 @@ const Conversations = () => {
                 toast.dismiss(t.id); // Ferme le toast de confirmation
                 try {
                   await axios.delete(
-                    `https://pfe2025-api.vercel.app/conversation/${conversationId}`,
+                    `https://pfe-aya.onrender.com/conversation/${conversationId}`,
                     {
                       data: { userId: currentUser._id },
                     }

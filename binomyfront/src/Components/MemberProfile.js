@@ -58,7 +58,7 @@ function UserPublicProfile() {
 
         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
           <img
-            src={`https://pfe2025-api.vercel.app/files/${user?.photo}`}
+            src={`https://pfe-aya.onrender.com/files/${user?.photo}`}
             alt={user?.nom}
             className="w-32 h-32 rounded-full object-cover shadow-md border-4 border-yellow-300"
             style={{ boxShadow: "0 0 10px #00ffff88" }}

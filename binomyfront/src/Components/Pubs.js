@@ -161,7 +161,7 @@ export default function Pubs({ user }) {
               <div className="relative mt-6 flex items-center gap-x-4 w-full justify-between">
                 <div className="flex items-center gap-x-4">
                   <img
-                    src={`https://pfe2025-api.vercel.app/files/${post.author.imageUrl}`}
+                    src={`https://pfe-aya.onrender.com/files/${post.author.imageUrl}`}
                     alt="Auteur"
                     className="w-10 h-10 rounded-full border-2 border-yellow-300 shadow"
                   />

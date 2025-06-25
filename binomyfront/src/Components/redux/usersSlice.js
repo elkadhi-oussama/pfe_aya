@@ -5,7 +5,7 @@ import axios from "axios";
 export const getusers = createAsyncThunk("users/get", async () => {
   try {
     const response = await axios.get(
-      "https://pfe2025-api.vercel.app/user/allusers"
+      "https://pfe-aya.onrender.com/user/allusers"
     );
     return response.data; // ✅ retourne uniquement les données JSON
   } catch (error) {
@@ -24,7 +24,7 @@ export const getFilteredUsers = createAsyncThunk(
       if (filters.about) params.append("about", filters.about);
 
       const res = await axios.get(
-        `https://pfe2025-api.vercel.app/user/filter?${params.toString()}`
+        `https://pfe-aya.onrender.com/user/filter?${params.toString()}`
       );
       return res.data;
     } catch (error) {

@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 
 export const fetchOffres = createAsyncThunk("offre/all", async () => {
   try {
-    let result = axios.get("https://pfe2025-api.vercel.app/offre/all");
+    let result = axios.get("https://pfe-aya.onrender.com/offre/all");
     return result;
   } catch (error) {
     console.log(error);
@@ -16,7 +16,7 @@ export const fetchOffresByOwner = createAsyncThunk(
   async (id, { rejectWithValue }) => {
     try {
       const result = await axios.get(
-        `https://pfe2025-api.vercel.app/offre/${id}`
+        `https://pfe-aya.onrender.com/offre/${id}`
       );
       return result.data.offers;
     } catch (error) {
@@ -30,7 +30,7 @@ export const addOffre = createAsyncThunk(
   async (formData, { rejectWithValue }) => {
     try {
       const result = await axios.post(
-        "https://pfe2025-api.vercel.app/offre/add",
+        "https://pfe-aya.onrender.com/offre/add",
         formData
       );
       Swal.fire("Succès", "Offre ajoutée", "success");
@@ -46,7 +46,7 @@ export const deleteoffre = createAsyncThunk(
   "offre/delete",
   async (id, { rejectWithValue }) => {
     try {
-      await axios.delete(`https://pfe2025-api.vercel.app/offre/${id}`);
+      await axios.delete(`https://pfe-aya.onrender.com/offre/${id}`);
       Swal.fire("Succès", "Offre supprimée", "success").then(() => {
         setTimeout(() => {
           window.location.reload();
@@ -65,7 +65,7 @@ export const editoffre = createAsyncThunk(
   async ({ id, editedoffre }) => {
     try {
       let result = axios.put(
-        `https://pfe2025-api.vercel.app/offre/${id}`,
+        `https://pfe-aya.onrender.com/offre/${id}`,
         editedoffre
       );
       return result;

@@ -73,7 +73,7 @@ export default function Register() {
 
     try {
       const result = await axios.post(
-        "https://pfe2025-api.vercel.app/user/register",
+        "https://pfe-aya.onrender.com/user/register",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },

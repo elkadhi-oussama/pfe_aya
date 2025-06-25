@@ -67,7 +67,7 @@ function MesOffres() {
                 </div>
 
                 <img
-                  src={`https://pfe2025-api.vercel.app/offres/${offer.images?.[0]}`}
+                  src={`https://pfe-aya.onrender.com/offres/${offer.images?.[0]}`}
                   alt={offer.title}
                   className="w-full h-40 object-cover rounded mb-2"
                   style={{ borderRadius: "12px" }}

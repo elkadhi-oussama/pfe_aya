@@ -9,7 +9,7 @@ export const userLogin = createAsyncThunk(
   async (user, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        "https://pfe2025-api.vercel.app/user/login",
+        "https://pfe-aya.onrender.com/user/login",
         user
       );
       return response.data;
@@ -22,7 +22,7 @@ export const userLogin = createAsyncThunk(
 export const userCurrent = createAsyncThunk("user/current", async () => {
   try {
     const response = await axios.get(
-      "https://pfe2025-api.vercel.app/user/current",
+      "https://pfe-aya.onrender.com/user/current",
       {
         headers: {
           Authorization: localStorage.getItem("token"),
@@ -42,7 +42,7 @@ export const userEdit = createAsyncThunk(
   async ({ id, edituser }) => {
     try {
       const result = await axios.put(
-        `https://pfe2025-api.vercel.app/user/${id}`,
+        `https://pfe-aya.onrender.com/user/${id}`,
         edituser,
         {
           headers: { "Content-Type": "multipart/form-data" },
@@ -61,7 +61,7 @@ export const validateUser = createAsyncThunk(
   "admin/validate",
   async ({ id, etat }) => {
     const res = await axios.put(
-      `https://pfe2025-api.vercel.app/user/validate/${id}`,
+      `https://pfe-aya.onrender.com/user/validate/${id}`,
       { etat }
     );
     return res.data.user;
@@ -71,7 +71,7 @@ export const validateUser = createAsyncThunk(
 export const removeuser = createAsyncThunk("user/delete", async (id) => {
   try {
     const result = await axios.delete(
-      `https://pfe2025-api.vercel.app/user/${id}`
+      `https://pfe-aya.onrender.com/user/${id}`
     );
     return result.data;
   } catch (error) {

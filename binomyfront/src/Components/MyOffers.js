@@ -241,7 +241,7 @@ function MyOffers() {
                 </div>
                 <img
                   alt={offer?.title}
-                  src={`https://pfe2025-api.vercel.app/offres/${offer?.images?.[0]}`}
+                  src={`https://pfe-aya.onrender.com/offres/${offer?.images?.[0]}`}
                   style={{
                     width: "100%",
                     height: "200px",

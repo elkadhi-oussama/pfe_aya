@@ -3,14 +3,14 @@ import axios from "axios";
 
 // Récupérer tous les posts
 export const fetchPosts = createAsyncThunk("post/fetch", async () => {
-  const res = await axios.get("https://pfe2025-api.vercel.app/post");
+  const res = await axios.get("https://pfe-aya.onrender.com/post");
   return res.data; // on suppose que c’est un tableau direct
 });
 
 // Ajouter un post
 export const addPost = createAsyncThunk("post/add", async (postData) => {
   const res = await axios.post(
-    "https://pfe2025-api.vercel.app/post/add",
+    "https://pfe-aya.onrender.com/post/add",
     postData
   );
   return res.data;
@@ -18,7 +18,7 @@ export const addPost = createAsyncThunk("post/add", async (postData) => {
 
 // Supprimer un post
 export const deletePost = createAsyncThunk("post/delete", async (id) => {
-  await axios.delete(`https://pfe2025-api.vercel.app/post/${id}`);
+  await axios.delete(`https://pfe-aya.onrender.com/post/${id}`);
   return id;
 });
 
