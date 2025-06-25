@@ -5,8 +5,8 @@
   "scripts": {
     "back": "cd API && nodemon index.js",
     "front": "cd .. && cd binomyfront && npm start",
-    "start": "concurrently \"npm run back\" \"npm run front\"",
-    "runWeb" : "nodemon index.js"
+    "runWeb": "concurrently \"npm run back\" \"npm run front\"",
+    "start" : "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
