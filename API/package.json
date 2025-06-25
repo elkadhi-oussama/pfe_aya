@@ -1,0 +1,33 @@
+{
+  "name": "binomy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "back": "cd API && nodemon index.js",
+    "front": "cd .. && cd binomyfront && npm start",
+    "start": "concurrently \"npm run back\" \"npm run front\""
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "bcrypt": "^5.1.1",
+    "concurrently": "^9.1.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1",
+    "html2canvas": "^1.4.1",
+    "jsonwebtoken": "^9.0.2",
+    "jspdf": "^3.0.1",
+    "mongoose": "^8.13.2",
+    "multer": "^1.4.5-lts.2",
+    "nodemon": "^3.1.9",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "react-hot-toast": "^2.5.2",
+    "react-icons": "^5.5.0",
+    "socket.io": "^4.8.1"
+  }
+}
